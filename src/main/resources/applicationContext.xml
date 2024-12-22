@@ -7,6 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="myApp.properties"/>
+
     <bean id="myPet"
           class="com.udemu.demo.Dog">
 
@@ -15,5 +17,8 @@
     <bean id="myPerson"
           class="com.udemu.demo.Person">
         <property name="pet" ref="myPet"/>
+
+        <property name="surname" value="${person.surname}"/>
+        <property name="age" value="${person.age}"/>
     </bean>
 </beans>
