@@ -16,4 +16,12 @@ public class Dog implements Pet{
     public void say() {
         System.out.println("wow wow");
     }
+
+    public void init() {
+        System.out.println("Class Dog: init");
+    }
+
+    public void destroy() {
+        System.out.println("Class Dog: destroy");
+    }
 }

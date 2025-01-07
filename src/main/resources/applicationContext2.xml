@@ -9,6 +9,7 @@
 
     <bean id="myPet"
           class="com.udemu.demo.Dog"
-          scope="prototype">
+          init-method="init"
+          destroy-method="destroy">
     </bean>
 </beans>
