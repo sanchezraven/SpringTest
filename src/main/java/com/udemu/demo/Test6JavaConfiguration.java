@@ -7,8 +7,12 @@ public class Test6JavaConfiguration {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(MyConfig.class);
 
+//        Pet cat = context.getBean("catBean", Pet.class);
+//        cat.say();
+
         Person person = context.getBean("personBean", Person.class);
-        person.callYourPet();
+        System.out.println(person.getSurname());
+        System.out.println(person.getAge());
 
         context.close();
     }
